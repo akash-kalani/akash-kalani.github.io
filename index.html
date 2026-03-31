@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>Akash Sanjay Kalani | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,36 +16,44 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:'Inter',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#020617,#0f172a);
-color:#e2e8f0;
+background:#0B0F19;
+color:#E5E7EB;
 }
 
-/* HEADER */
+/* CONTAINER */
 
-header{
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* HERO */
+
+.hero{
 text-align:center;
 padding:90px 20px;
 }
 
-header img{
-width:160px;
-height:160px;
+.hero img{
+width:150px;
+height:150px;
 border-radius:50%;
-border:4px solid #3b82f6;
+border:3px solid #3B82F6;
 margin-bottom:20px;
 }
 
-header h1{
+.hero h1{
 font-size:42px;
 margin-bottom:10px;
 }
 
-header p{
-color:#94a3b8;
+.hero p{
+color:#9CA3AF;
 font-size:18px;
 }
 
@@ -65,98 +72,74 @@ transition:.3s;
 }
 
 .linkedin{
-background:#2563eb;
+background:#3B82F6;
 color:white;
 }
 
 .resume{
-background:#10b981;
+background:#22C55E;
 color:white;
 }
 
 .btn:hover{
-transform:translateY(-3px);
+opacity:.85;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
-max-width:1100px;
-margin:auto;
-padding:70px 20px;
+margin-top:60px;
 }
 
 h2{
-font-size:30px;
-margin-bottom:25px;
-border-left:4px solid #3b82f6;
-padding-left:12px;
+font-size:26px;
+margin-bottom:20px;
+border-bottom:1px solid #1F2937;
+padding-bottom:8px;
 }
 
-/* GLASS CARD */
+/* CARD */
 
 .card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-padding:25px;
-border-radius:10px;
-margin-bottom:20px;
-transition:0.3s;
+background:#111827;
+padding:22px;
+border-radius:8px;
+margin-bottom:16px;
+border:1px solid #1F2937;
+transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+border-color:#3B82F6;
 }
 
-/* SKILL GRAPH */
+/* SKILLS */
 
-.skill{
-margin-bottom:20px;
-}
-
-.skill-name{
-margin-bottom:6px;
-}
-
-.bar{
-background:#1e293b;
-height:10px;
+.skills span{
+display:inline-block;
+background:#1F2937;
+padding:7px 12px;
+margin:6px;
 border-radius:6px;
-overflow:hidden;
-}
-
-.progress{
-height:10px;
-background:#3b82f6;
-width:0;
-transition:2s;
+font-size:13px;
 }
 
 /* PROJECT GRID */
 
-.projects{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:16px;
 }
 
-/* ANIMATION */
-
-.hidden{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.show{
-opacity:1;
-transform:translateY(0);
-}
+/* FOOTER */
 
 footer{
 text-align:center;
-padding:40px;
-color:#94a3b8;
+margin-top:60px;
+padding:30px;
+color:#9CA3AF;
+border-top:1px solid #1F2937;
 }
 
 </style>
@@ -165,7 +148,7 @@ color:#94a3b8;
 
 <body>
 
-<header>
+<div class="hero">
 
 <img src="profile.jpg">
 
@@ -187,17 +170,19 @@ Download Resume </a>
 
 </div>
 
-</header>
+</div>
 
-<section class="hidden">
+<div class="container">
+
+<section>
 
 <h2>Professional Summary</h2>
 
 <div class="card">
 
 Quality-first software engineer with 2.5+ years building and validating industrial web applications.
-Strong experience in ASP.NET MVC, jQuery, React and QA validation including FAT/SAT testing,
-SQL diagnostics and system validation.
+Experience in frontend development using ASP.NET MVC, jQuery and React along with strong QA
+validation including FAT/SAT testing, SQL diagnostics and system validation.
 
 Reduced operational downtime by 15% and improved system reliability by 20%.
 
@@ -205,69 +190,21 @@ Reduced operational downtime by 15% and improved system reliability by 20%.
 
 </section>
 
-<section class="hidden">
+<section>
 
 <h2>Technical Skills</h2>
 
-<div class="card">
+<div class="card skills">
 
-<div class="skill">
-<div class="skill-name">ASP.NET MVC / C#</div>
-<div class="bar"><div class="progress" style="width:90%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">SQL / Database Diagnostics</div>
-<div class="bar"><div class="progress" style="width:85%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">Manual & Automation Testing</div>
-<div class="bar"><div class="progress" style="width:88%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">React / jQuery / Frontend</div>
-<div class="bar"><div class="progress" style="width:80%"></div></div>
-</div>
-
-<div class="skill">
-<div class="skill-name">Industrial Automation Systems</div>
-<div class="bar"><div class="progress" style="width:85%"></div></div>
-</div>
+<span>ASP.NET MVC (C#)</span> <span>React</span> <span>jQuery</span> <span>HTML5</span> <span>CSS3</span> <span>Bootstrap</span> <span>PHP</span> <span>SQL Server</span> <span>MySQL</span> <span>Manual Testing</span> <span>Automation Testing</span> <span>FAT/SAT</span> <span>SQL Diagnostics</span> <span>Playwright</span> <span>Git</span> <span>IIS</span> <span>JIRA</span> <span>ASRS</span> <span>WMS</span> <span>ITMS</span>
 
 </div>
 
 </section>
 
-<section class="hidden">
+<section>
 
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-<h3>ASRS Automation System</h3>
-<p>Developed ASP.NET screens and Andon dashboards for industrial storage automation.</p>
-</div>
-
-<div class="card">
-<h3>Vertical Lift System</h3>
-<p>Inventory tracking dashboards and reporting systems for material management.</p>
-</div>
-
-<div class="card">
-<h3>ITMS / IMS</h3>
-<p>QA leadership and operational analytics dashboards for tooling systems.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="hidden">
-
-<h2>Experience</h2>
+<h2>Professional Experience</h2>
 
 <div class="card">
 
@@ -277,10 +214,10 @@ May 2023 – Present
 
 <p style="margin-top:10px">
 
-Working on industrial automation software including ASRS,
+Working on industrial automation systems including ASRS,
 Vertical Lift Systems and ITMS with responsibilities across
 frontend development, QA validation, FAT/SAT testing and
-system deployment.
+deployment support.
 
 </p>
 
@@ -288,7 +225,32 @@ system deployment.
 
 </section>
 
-<section class="hidden">
+<section>
+
+<h2>Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>ASRS Automation System</h3>
+<p>ASP.NET operational dashboards and real-time Andon monitoring.</p>
+</div>
+
+<div class="card">
+<h3>Vertical Lift System</h3>
+<p>Inventory tracking dashboards and reporting tools.</p>
+</div>
+
+<div class="card">
+<h3>ITMS / IMS</h3>
+<p>QA leadership and operational analytics dashboards.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
 
 <h2>Education</h2>
 
@@ -302,7 +264,7 @@ Diploma in Electronics and Communication — 2021
 
 </section>
 
-<section class="hidden">
+<section>
 
 <h2>Certifications</h2>
 
@@ -317,37 +279,13 @@ Java Full Stack Development Program
 
 </section>
 
+</div>
+
 <footer>
 
 © 2026 Akash Sanjay Kalani
 
 </footer>
-
-<script>
-
-/* SCROLL ANIMATION */
-
-const elements=document.querySelectorAll('.hidden');
-
-function showOnScroll(){
-
-elements.forEach(el=>{
-
-const top=el.getBoundingClientRect().top;
-
-if(top<window.innerHeight-120){
-el.classList.add('show');
-}
-
-});
-
-}
-
-window.addEventListener('scroll',showOnScroll);
-
-showOnScroll();
-
-</script>
 
 </body>
 </html>
