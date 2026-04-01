@@ -12,6 +12,8 @@
 
 <style>
 
+/* GLOBAL */
+
 *{
 margin:0;
 padding:0;
@@ -21,8 +23,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0B0F19;
-color:#E5E7EB;
+background:#0A0A0A;
+color:#EAEAEA;
 }
 
 /* NAVBAR */
@@ -30,29 +32,29 @@ color:#E5E7EB;
 nav{
 position:sticky;
 top:0;
-background:rgba(11,15,25,0.95);
-backdrop-filter:blur(10px);
+background:#0A0A0A;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 40px;
-border-bottom:1px solid #1F2937;
+border-bottom:1px solid #1F1F1F;
 z-index:100;
 }
 
 nav h2{
-font-size:18px;
+color:#FF9F1C;
 }
 
 nav a{
-color:#9CA3AF;
+color:#A1A1AA;
 margin-left:25px;
 text-decoration:none;
 font-size:14px;
+transition:.3s;
 }
 
 nav a:hover{
-color:#3B82F6;
+color:#FF9F1C;
 }
 
 /* HERO */
@@ -60,23 +62,24 @@ color:#3B82F6;
 .hero{
 text-align:center;
 padding:120px 20px;
+background:radial-gradient(circle at top,#1a1a1a,#0A0A0A);
 }
 
 .hero img{
 width:150px;
 height:150px;
 border-radius:50%;
-border:3px solid #3B82F6;
+border:3px solid #FF9F1C;
 margin-bottom:20px;
 }
 
 .hero h1{
 font-size:42px;
-margin-bottom:10px;
 }
 
 .hero p{
-color:#9CA3AF;
+color:#A1A1AA;
+margin-top:8px;
 font-size:18px;
 }
 
@@ -86,7 +89,7 @@ margin-top:25px;
 
 .btn{
 display:inline-block;
-padding:12px 22px;
+padding:12px 24px;
 border-radius:6px;
 margin:6px;
 font-size:14px;
@@ -95,18 +98,19 @@ transition:.3s;
 }
 
 .linkedin{
-background:#3B82F6;
-color:white;
+background:#FF9F1C;
+color:black;
 }
 
 .resume{
-background:#22C55E;
-color:white;
+background:#1F1F1F;
+color:#FF9F1C;
+border:1px solid #FF9F1C;
 }
 
 .btn:hover{
-transform:translateY(-3px);
-opacity:.9;
+transform:translateY(-4px);
+box-shadow:0 0 10px #FF9F1C55;
 }
 
 /* CONTAINER */
@@ -121,25 +125,26 @@ padding:40px 20px;
 
 section{
 margin-top:80px;
+scroll-margin-top:100px;
 }
 
 h2{
 font-size:28px;
 margin-bottom:20px;
-border-bottom:1px solid #1F2937;
+border-bottom:1px solid #1F1F1F;
 padding-bottom:10px;
 }
 
 h3{
 margin:25px 0 15px 0;
-color:#9CA3AF;
+color:#FF9F1C;
 }
 
 /* CARD */
 
 .card{
-background:#111827;
-border:1px solid #1F2937;
+background:#121212;
+border:1px solid #1F1F1F;
 padding:22px;
 border-radius:10px;
 margin-bottom:20px;
@@ -147,8 +152,9 @@ transition:.3s;
 }
 
 .card:hover{
-border-color:#3B82F6;
-transform:translateY(-4px);
+border-color:#FF9F1C;
+transform:translateY(-5px);
+box-shadow:0 0 15px #FF9F1C22;
 }
 
 /* SKILLS */
@@ -162,7 +168,7 @@ margin-bottom:6px;
 }
 
 .bar{
-background:#1F2937;
+background:#1F1F1F;
 height:8px;
 border-radius:4px;
 overflow:hidden;
@@ -170,7 +176,7 @@ overflow:hidden;
 
 .progress{
 height:8px;
-background:#3B82F6;
+background:#FF9F1C;
 }
 
 /* PROJECT GRID */
@@ -190,8 +196,8 @@ gap:20px;
 }
 
 .gallery-card{
-background:#111827;
-border:1px solid #1F2937;
+background:#121212;
+border:1px solid #1F1F1F;
 border-radius:10px;
 overflow:hidden;
 transition:.3s;
@@ -199,7 +205,8 @@ transition:.3s;
 
 .gallery-card:hover{
 transform:translateY(-6px);
-border-color:#3B82F6;
+border-color:#FF9F1C;
+box-shadow:0 0 15px #FF9F1C22;
 }
 
 .gallery-card img{
@@ -211,7 +218,7 @@ object-fit:cover;
 .gallery-card p{
 padding:12px;
 font-size:14px;
-color:#9CA3AF;
+color:#A1A1AA;
 }
 
 /* FOOTER */
@@ -220,8 +227,8 @@ footer{
 text-align:center;
 margin-top:80px;
 padding:30px;
-color:#9CA3AF;
-border-top:1px solid #1F2937;
+color:#A1A1AA;
+border-top:1px solid #1F1F1F;
 }
 
 </style>
@@ -369,12 +376,12 @@ Manufacturing tracking system including QA validation, production monitoring and
 
 <div class="gallery-card">
 <img src="asrs-training2.jpg">
-<p>Explaining ASRS software workflow and system operation.</p>
+<p>Conducted ASRS software training sessions and presented the system workflow using PPT presentations.</p>
 </div>
 
 <div class="gallery-card">
 <img src="asrs-training3.jpg">
-<p>Provided ASRS software training to operators and presented system workflow through a detailed PPT presentation.</p>
+<p>Provided ASRS software training to operators and explained system workflow.</p>
 </div>
 
 </div>
@@ -385,12 +392,12 @@ Manufacturing tracking system including QA validation, production monitoring and
 
 <div class="gallery-card">
 <img src="ims-training1.jpg">
-<p>Customer training session for IMS / ITMS system workflow.</p>
+<p>Provided training for IMS / ITMS system workflow and operation.</p>
 </div>
 
 <div class="gallery-card">
 <img src="ims-training2.jpg">
-<p>Conducted training sessions on system interface and operational workflows and provided training certificates to operators.</p>
+<p>Explained system interface, conducted operator training sessions, and issued training certificates.</p>
 </div>
 
 </div>
@@ -401,17 +408,17 @@ Manufacturing tracking system including QA validation, production monitoring and
 
 <div class="gallery-card">
 <img src="imtex1.jpg">
-<p>Participating in IMTEX industrial exhibition presenting automation solutions.</p>
+<p>Participated in the IMTEX industrial exhibition representing industrial automation solutions.</p>
 </div>
 
 <div class="gallery-card">
 <img src="imtex2.jpg">
-<p>Explaining automation system capabilities to visitors.</p>
+<p>Explained automation system capabilities to exhibition visitors.</p>
 </div>
 
 <div class="gallery-card">
 <img src="imtex3.jpg">
-<p>Participated in the IMTEX industrial exhibition and engaged with visitors to present automation solutions.</p>
+<p>Participated in the IMTEX exhibition and engaged with visitors to present automation solutions.</p>
 </div>
 
 </div>
@@ -454,6 +461,32 @@ Java Full Stack Development
 © 2026 Akash Sanjay Kalani
 
 </footer>
+
+<script>
+
+/* DISABLE RIGHT CLICK */
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+/* BLOCK INSPECT SHORTCUTS */
+
+document.onkeydown = function(e) {
+
+if (e.keyCode == 123) {
+return false;
+}
+
+if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+return false;
+}
+
+if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+return false;
+}
+
+}
+
+</script>
 
 </body>
 </html>
