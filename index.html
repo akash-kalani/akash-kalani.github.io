@@ -1,581 +1,1154 @@
 <!DOCTYPE html>
+
+
+
 <html lang="en">
+
 <head>
 
+
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
 <title>Akash Sanjay Kalani | Portfolio</title>
 
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+
+
 <style>
 
+
+
 *{
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
+
 font-family:'Poppins',sans-serif;
+
 scroll-behavior:smooth;
+
 }
 
+
+
 body{
+
 background:#0A0A0A;
+
 color:#EAEAEA;
+
 overflow-x:hidden;
+
 }
+
+
 
 /* LOADER */
 
+
+
 #loader{
+
 position:fixed;
+
 width:100%;
+
 height:100%;
+
 background:#0A0A0A;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 z-index:9999;
+
 }
+
+
 
 .loader{
+
 width:45px;
+
 height:45px;
+
 border:4px solid #333;
-border-top:4px solid #FF9F1C;
+
+border-top:4px solid #C19A6B;
+
 border-radius:50%;
+
 animation:spin 1s linear infinite;
+
 }
 
+
+
 @keyframes spin{
+
 0%{transform:rotate(0deg)}
+
 100%{transform:rotate(360deg)}
+
 }
+
+
 
 /* NAVBAR */
 
+
+
 nav{
+
 position:sticky;
+
 top:0;
+
 background:#0A0A0A;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
+
 padding:15px 40px;
+
 border-bottom:1px solid #1F1F1F;
+
 z-index:100;
+
 }
+
+
 
 nav h2{
-color:#FF9F1C;
+
+color:#C19A6B;
+
 }
+
+
 
 nav a{
+
 color:#A1A1AA;
+
 margin-left:22px;
+
 text-decoration:none;
+
 font-size:14px;
+
 transition:.3s;
+
 }
 
+
+
 nav a:hover,
+
 nav a.active{
-color:#FF9F1C;
+
+color:#C19A6B;
+
 }
+
+
 
 /* HERO */
 
+
+
 .hero{
+
 text-align:center;
+
 padding:120px 20px;
+
 background:radial-gradient(circle at top,#1a1a1a,#0A0A0A);
+
 }
+
+
 
 .hero img{
+
 width:150px;
+
 height:150px;
+
 border-radius:50%;
-border:3px solid #FF9F1C;
+
+border:3px solid #C19A6B;
+
 margin-bottom:20px;
+
 transition:transform .4s;
+
 }
+
+
 
 .hero img:hover{
+
 transform:rotateY(10deg) rotateX(10deg);
+
 }
+
+
 
 .hero h1{
+
 font-size:42px;
+
 }
+
+
 
 .hero p{
+
 color:#A1A1AA;
+
 margin-top:8px;
+
 font-size:18px;
+
 }
+
+
 
 .buttons{
+
 margin-top:25px;
+
 }
+
+
 
 .btn{
+
 display:inline-block;
+
 padding:12px 22px;
+
 border-radius:6px;
+
 margin:6px;
+
 font-size:14px;
+
 text-decoration:none;
+
 transition:.3s;
+
 }
+
+
 
 .btn i{
+
 margin-right:6px;
+
 }
+
+
 
 .linkedin{
-background:#FF9F1C;
+
+background:#C19A6B;
+
 color:black;
+
 }
+
+
 
 .resume{
+
 background:#1F1F1F;
-color:#FF9F1C;
-border:1px solid #FF9F1C;
+
+color:#C19A6B;
+
+border:1px solid #C19A6B;
+
 }
 
+
+
 .btn:hover{
+
 transform:translateY(-4px);
-box-shadow:0 0 12px #FF9F1C55;
+
+box-shadow:0 0 12px #C19A6B55;
+
 }
+
+
 
 /* FLOAT BUTTON */
 
+
+
 .float-resume{
+
 position:fixed;
+
 right:20px;
+
 bottom:20px;
-background:#FF9F1C;
+
+background:#C19A6B;
+
 color:black;
+
 padding:12px 15px;
+
 border-radius:40px;
+
 text-decoration:none;
-box-shadow:0 0 10px #FF9F1C55;
+
+box-shadow:0 0 10px #C19A6B55;
+
 }
+
+
 
 /* CONTAINER */
 
+
+
 .container{
+
 max-width:1100px;
+
 margin:auto;
+
 padding:40px 20px;
+
 }
+
+
 
 section{
+
 margin-top:80px;
+
 scroll-margin-top:100px;
+
 }
+
+
 
 h2{
+
 font-size:28px;
+
 margin-bottom:20px;
+
 border-bottom:1px solid #1F1F1F;
+
 padding-bottom:10px;
+
 }
 
+
+
 h3{
+
 margin:20px 0;
-color:#FF9F1C;
+
+color:#C19A6B;
+
 }
+
+
 
 /* CARD */
 
+
+
 .card{
+
 background:#121212;
+
 border:1px solid #1F1F1F;
+
 padding:20px;
+
 border-radius:10px;
+
 transition:.4s;
+
 }
 
+
+
 .card:hover{
+
 transform:rotateY(5deg) translateY(-6px);
-border-color:#FF9F1C;
-box-shadow:0 0 15px #FF9F1C33;
+
+border-color:#C19A6B;
+
+box-shadow:0 0 15px #C19A6B33;
+
 }
+
+
 
 /* GRID */
 
+
+
 .grid{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
 gap:20px;
+
 }
+
+
 
 /* SKILLS */
 
+
+
 .skill{
+
 margin-bottom:18px;
+
 }
+
+
 
 .bar{
+
 background:#1F1F1F;
+
 height:8px;
+
 border-radius:4px;
+
 }
 
+
+
 .progress{
+
 height:8px;
-background:#FF9F1C;
+
+background:#C19A6B;
+
 }
+
+
 
 /* ADDED BUTTON STYLE */
 
+
+
 .more-btn{
+
 margin-top:20px;
+
 padding:10px 20px;
-background:#FF9F1C;
+
+background:#C19A6B;
+
 color:black;
+
 border:none;
+
 border-radius:6px;
+
 cursor:pointer;
+
 font-size:14px;
+
 }
 
+
+
 .more-btn:hover{
-box-shadow:0 0 12px #FF9F1C55;
+
+box-shadow:0 0 12px #C19A6B55;
+
 }
+
+
 
 /* GALLERY */
 
+
+
 .gallery{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
 gap:20px;
+
 }
+
+
 
 .gallery-card{
+
 background:#121212;
+
 border:1px solid #1F1F1F;
+
 border-radius:10px;
+
 overflow:hidden;
+
 transition:.4s;
+
 }
+
+
 
 .gallery-card:hover{
+
 transform:rotateY(6deg) translateY(-6px);
-border-color:#FF9F1C;
+
+border-color:#C19A6B;
+
 }
+
+
 
 .gallery-card img{
+
 width:100%;
+
 height:200px;
+
 object-fit:cover;
+
 }
 
+
+
 .gallery-card p{
+
 padding:12px;
+
 font-size:14px;
+
 color:#A1A1AA;
+
 }
+
+
 
 /* FOOTER */
 
+
+
 footer{
+
 text-align:center;
+
 padding:30px;
+
 margin-top:80px;
+
 border-top:1px solid #1F1F1F;
+
 color:#888;
+
 }
+
+
 
 /* REVEAL */
 
+
+
 .reveal{
+
 opacity:0;
+
 transform:translateY(40px);
+
 transition:all .8s;
+
 }
 
+
+
 .reveal.active{
+
 opacity:1;
+
 transform:translateY(0);
+
 }
+
+
 
 </style>
 
+
+
 </head>
+
+
 
 <body>
 
+
+
 <div id="loader">
+
 <div class="loader"></div>
+
 </div>
 
+
+
 <nav>
+
 <h2>Akash Kalani</h2>
+
 <div>
+
 <a href="#about">About</a>
+
 <a href="#skills">Skills</a>
+
 <a href="#projects">Projects</a>
+
 <a href="#experience">Experience</a>
+
 <a href="#education">Education</a>
+
 <a href="#certificates">Certificates</a>
+
 </div>
+
 </nav>
+
+
 
 <div class="hero">
 
-<img src="profile.jpg">
+
+
+<img src="profile.jpg" loading="lazy">
+
+
 
 <h1>Akash Sanjay Kalani</h1>
 
+
+
 <p>QA Automation Engineer · Frontend Developer</p>
+
+
 
 <div class="buttons">
 
+
+
 <a class="btn linkedin" href="https://www.linkedin.com/in/akash-kalani-714127246" target="_blank">
+
 <i class="fab fa-linkedin"></i> LinkedIn
+
 </a>
+
+
 
 <a class="btn resume" href="Akash-Kalani.pdf" target="_blank">
+
 <i class="fa-solid fa-eye"></i> View Resume
+
 </a>
+
+
 
 <a class="btn resume" href="Akash-Kalani.pdf" download>
+
 <i class="fa-solid fa-download"></i> Download Resume
+
 </a>
 
-</div>
+
 
 </div>
+
+
+
+</div>
+
+
 
 <a class="float-resume" href="Akash-Kalani.pdf" target="_blank">
+
 <i class="fa-solid fa-file"></i>
+
 </a>
+
+
 
 <div class="container">
 
-<!-- ABOUT SECTION -->
+
+
 <section id="about" class="reveal">
+
 <h2>Professional Summary</h2>
+
 <div class="card">
+
 Software Engineer focused on building reliable industrial software systems. With 2.5+ years of experience in web development and system validation, I specialize in developing stable production applications using ASP.NET MVC, React, CSS, and Bootstrap. My work combines hands-on development with strong quality assurance practices, including manual testing, FAT/SAT validation, SQL diagnostics, and API testing using Postman, ensuring systems perform reliably in real-world industrial environments.
 
+
+
 I have helped reduce operational downtime by 15% and improve system stability by 20% through improved UI design and rigorous validation processes. Currently pursuing BCA to strengthen my computer science foundations and certified in ISO 9001, ISO 27001, and Google Cloud
+
+
+
 </div>
+
 </section>
 
-<!-- SKILLS SECTION WITH MORE OPTION -->
+
+
 <section id="skills" class="reveal">
+
 <h2>Technical Skills</h2>
 
+
+
 <div class="card">
+
 <div class="skill">Frontend Development</div>
+
 <div class="bar"><div class="progress" style="width:85%"></div></div>
+
+
 
 <div class="skill">ASP.NET MVC / C#</div>
+
 <div class="bar"><div class="progress" style="width:80%"></div></div>
+
+
 
 <div class="skill">Automation Testing</div>
+
 <div class="bar"><div class="progress" style="width:88%"></div></div>
 
+
+
 <div class="skill">SQL</div>
+
 <div class="bar"><div class="progress" style="width:75%"></div></div>
 
-<!-- HIDDEN EXTRA SKILLS -->
+
+
 <div id="moreSkills" style="display:none;">
+
 <div class="skill">API Testing (Postman)</div>
+
 <div class="bar"><div class="progress" style="width:85%"></div></div>
 
+
+
 <div class="skill">FAT / SAT Validation</div>
+
 <div class="bar"><div class="progress" style="width:90%"></div></div>
 
+
+
 <div class="skill">SQL Server & MySQL</div>
+
 <div class="bar"><div class="progress" style="width:78%"></div></div>
 
+
+
 <div class="skill">Git & JIRA</div>
+
 <div class="bar"><div class="progress" style="width:72%"></div></div>
 
+
+
 <div class="skill">Industrial Systems (ASRS / WMS / VLS)</div>
+
 <div class="bar"><div class="progress" style="width:80%"></div></div>
+
 </div>
+
+
 
 <button class="more-btn" onclick="toggleSkills()">More Skills</button>
 
+
+
 </div>
+
 </section>
 
-<!-- PROJECTS SECTION -->
+
+
 <section id="projects" class="reveal">
+
 <h2>Key Projects</h2>
 
+
+
 <div class="grid">
+
 <div class="card">
+
 <h3>ASRS Automation System</h3>
+
 <p>Automated storage and retrieval system integrated with PLC automation.</p>
+
 </div>
 
+
+
 <div class="card">
+
 <h3>Vertical Lift System</h3>
+
 <p>Industrial inventory management solution.</p>
+
 </div>
 
+
+
 <div class="card">
+
 <h3>ITMS / IMS System</h3>
+
 <p>Storage for tools & live dashborads for tracking.</p>
+
 </div>
+
 </div>
+
 </section>
 
-<!-- EXPERIENCE SECTION -->
+
+
 <section id="experience" class="reveal">
+
 <h2>Industry Experience</h2>
 
+
+
 <h3>ASRS Customer Training</h3>
+
 <div class="gallery">
+
 <div class="gallery-card">
-<img src="asrs-training1.jpg">
+
+<img src="asrs-training1.jpg" loading="lazy">
+
 <p>ASRS customer training and workflow explanation.</p>
+
 </div>
+
 <div class="gallery-card">
-<img src="asrs-training2.jpg">
+
+<img src="asrs-training2.jpg" loading="lazy">
+
 <p>Operator system walkthrough session.</p>
+
 </div>
+
 <div class="gallery-card">
-<img src="asrs-training3.jpg">
+
+<img src="asrs-training3.jpg" loading="lazy">
+
 <p>Software flow presentation during training.</p>
+
 </div>
+
 </div>
+
+
 
 <h3>IMS / ITMS Training</h3>
+
 <div class="gallery">
+
 <div class="gallery-card">
-<img src="ims-training1.jpg">
+
+<img src="ims-training1.jpg" loading="lazy">
+
 <p>Training session with operators.</p>
+
 </div>
+
 <div class="gallery-card">
-<img src="ims-training2.jpg">
+
+<img src="ims-training2.jpg" loading="lazy">
+
 <p>Explaining system interface and operations & provided training certificates.</p>
+
 </div>
+
 </div>
+
+
 
 <h3>IMTEX Industrial Exhibition</h3>
+
 <div class="gallery">
+
 <div class="gallery-card">
-<img src="imtex1.jpg">
+
+<img src="imtex1.jpg" loading="lazy">
+
 <p>Presented automation solutions and system workflows at an industrial exhibition</p>
+
 </div>
+
 <div class="gallery-card">
-<img src="imtex2.jpg">
+
+<img src="imtex2.jpg" loading="lazy">
+
 <p>Explaining automation solutions.</p>
+
 </div>
+
 <div class="gallery-card">
-<img src="imtex3.jpg">
+
+<img src="imtex3.jpg" loading="lazy">
+
 <p>Industrial exhibition participation.</p>
+
 </div>
+
 </div>
+
 </section>
 
-<!-- EDUCATION SECTION -->
+
+
 <section id="education" class="reveal">
+
 <h2>Education</h2>
+
 <div class="card">Bachelor of Computer Applications — Pursuing</div>
+
 <div class="card">Diploma in Electronics & Communication — 2021</div>
+
 </section>
 
-<!-- CERTIFICATES SECTION -->
+
+
 <section id="certificates" class="reveal">
+
 <h2>Certifications</h2>
+
 <div class="grid">
+
 <div class="card">
+
 <h3>ISO 9001:2015 (QMS)</h3>
+
 <p>Quality Management System certification focused on quality assurance and process improvement.</p>
-</div>
-<div class="card">
-<h3>ISO 27001 (ISMS)</h3>
-<p>Information Security Management Systems certification covering data protection and risk management.</p>
-</div>
-<div class="card">
-<h3>Java Full Stack Development</h3>
-<p>Training covering backend development with Java along with frontend technologies and database integration.</p>
-</div>
-<div class="card">
-<h3>Google Cloud Networking</h3>
-<p>Certification covering VPC design, routing, load balancing and network architecture in Google Cloud.</p>
-</div>
-</div>
-</section>
 
 </div>
+
+<div class="card">
+
+<h3>ISO 27001 (ISMS)</h3>
+
+<p>Information Security Management Systems certification covering data protection and risk management.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Java Full Stack Development</h3>
+
+<p>Training covering backend development with Java along with frontend technologies and database integration.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Google Cloud Networking</h3>
+
+<p>Certification covering VPC design, routing, load balancing and network architecture in Google Cloud.</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+</div>
+
+
 
 <footer>
+
 © 2026 Akash Sanjay Kalani
+
 </footer>
+
+
 
 <script>
 
-/* MORE SKILLS TOGGLE */
+
+
 function toggleSkills(){
+
 var more=document.getElementById("moreSkills");
+
 var btn=document.querySelector(".more-btn");
 
+
+
 if(more.style.display==="none"){
+
 more.style.display="block";
+
 btn.innerText="Show Less";
+
 }else{
+
 more.style.display="none";
+
 btn.innerText="More Skills";
-}
+
 }
 
-/* LOADER */
-window.addEventListener("load",()=>{
+}
+
+
+
+window.addEventListener("DOMContentLoaded",()=>{
+
 document.getElementById("loader").style.display="none";
+
 });
 
-/* SCROLL REVEAL */
+
+
 function reveal(){
+
 let reveals=document.querySelectorAll(".reveal");
+
 for(let i=0;i<reveals.length;i++){
+
 let windowHeight=window.innerHeight;
+
 let elementTop=reveals[i].getBoundingClientRect().top;
+
 if(elementTop < windowHeight-100){
+
 reveals[i].classList.add("active");
-}
-}
-}
-window.addEventListener("scroll",reveal);
 
-/* ACTIVE NAV */
+}
+
+}
+
+}
+
+
+
+let timeout;
+
+window.addEventListener("scroll", () => {
+
+if (!timeout) {
+
+timeout = setTimeout(() => {
+
+reveal();
+
+timeout = null;
+
+}, 100);
+
+}
+
+});
+
+
+
 const sections=document.querySelectorAll("section");
+
 const navLinks=document.querySelectorAll("nav a");
+
+
+
 window.addEventListener("scroll",()=>{
+
 let current="";
+
 sections.forEach(section=>{
+
 const sectionTop=section.offsetTop;
+
 if(scrollY >= sectionTop-120){
+
 current=section.getAttribute("id");
+
 }
-});
-navLinks.forEach(a=>{
-a.classList.remove("active");
-if(a.getAttribute("href")==="#"+current){
-a.classList.add("active");
-}
-});
+
 });
 
-/* DISABLE INSPECT */
-document.addEventListener('contextmenu',event=>event.preventDefault());
-document.onkeydown=function(e){
-if(e.keyCode==123){return false;}
-if(e.ctrlKey && e.shiftKey && e.keyCode=='I'.charCodeAt(0)){return false;}
-if(e.ctrlKey && e.keyCode=='U'.charCodeAt(0)){return false;}
+navLinks.forEach(a=>{
+
+a.classList.remove("active");
+
+if(a.getAttribute("href")==="#"+current){
+
+a.classList.add("active");
+
 }
+
+});
+
+});
+
+
 
 </script>
 
+
+
 </body>
+
 </html>
+
